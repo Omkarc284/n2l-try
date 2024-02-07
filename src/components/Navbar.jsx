@@ -8,7 +8,7 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false)
   return (
     <nav className={`${styles.paddingX} w-full flex items-center fixed top-0 z-2`}>
-        <div className="w-full flex justify-between items-center max-w-8xl py-12 mx-auto">
+        <div className="w-full flex justify-between items-center max-w-8xl py-8 mx-auto">
             <Link 
                 to="/" 
                 className='flex items-center gap-2' 
@@ -21,7 +21,7 @@ const Navbar = () => {
                     <a href="/">Home</a>
                 </li>
                 <li className='text-black font-montserrat font-medium text-[16px] cursor-pointer  mx-4'>
-                    <a href="/">About Us</a>
+                    <a href='/aboutus' >About Us</a>
                 </li>
                 <li className='text-black font-montserrat font-medium text-[16px] cursor-pointer  mx-4'>
                     <a href="/">Services</a>
