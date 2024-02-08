@@ -1,4 +1,5 @@
 import React, { forwardRef, useState } from 'react'
+import emailjs from "@emailjs/browser";
 import { styles } from '../styles'
 import fb from '../assets/fb.svg'
 import insta from '../assets/insta.svg'
@@ -13,18 +14,46 @@ const Contact = forwardRef((props, ref) => {
     const [company, setCompany] = useState('')
     const [termsmodal, setTermsModal] = useState(false)
     const [privacymodal, sePrivacyModal] = useState(false)
+    const [loading, setLoading] = useState(false);
     const handleTerms = () => setTermsModal(!termsmodal)
     const handlePrivacy = () => sePrivacyModal(!privacymodal)
     const handleSubmit = (e) => {
+        
         e.preventDefault();
-        const data = {
-            name: name,
-            email: email,
-            phone: phone,
-            company: company,
-            message: message
+        setLoading(true)
+        emailjs
+      .send(
+        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+        {
+          from_name: name,
+          from_email: email,
+          phone: phone,
+          company: company,
+          to_email: "hello@nex2link.com",
+          message: message,
+        },
+        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        () => {
+          setLoading(false);
+          alert("Thank you. We will get back to you as soon as possible.");
+
+          setName('')
+          setEmail('')
+          setCompany('')
+          setPhone('')
+          setMessage('')
+          window.scrollTo({top:0, behavior: 'smooth'})
+        },
+        (error) => {
+          setLoading(false);
+          console.error(error);
+
+          alert("Ahh, something went wrong. Please try again.");
         }
-        console.log(data)
+      )
     }
     
   return (
@@ -46,12 +75,14 @@ const Contact = forwardRef((props, ref) => {
             </div>
             <div className="flex justify-center items-center w-1/2">
                 <form action="" onSubmit={handleSubmit} className='flex lg:w-96 flex-col gap-6 items-center'>
-                    <Input variant="standard" color='white' label='Name' placeholder='Your Name' required  onChange={(e)=>{setName(e.target.value)}}/>
-                    <Input variant="standard" color='white' inputMode='tel' label='Phone' placeholder='Enter 10 digit mobile number' required pattern='[0-9]{10}'  onChange={(e)=>{setPhone(e.target.value)}}/>
-                    <Input variant="standard" color='white' inputMode='email' label='Email' placeholder='Your Email Address' required  onChange={(e)=>{setEmail(e.target.value)}}/>
-                    <Input variant="standard" color='white' label='Company' placeholder='Your Company' required  onChange={(e)=>{setCompany(e.target.value)}}/>
-                    <Input variant='standard' color='white' multiple={true} label='Message' placeholder='Enter your  message...' rows={4}  onChange={(e)=>{setMessage(e.target.value)}}/>
-                    <Button type='submit' className='mt-6 w-36'  color='white' ripple size='lg'>Submit</Button>
+                    <Input variant="standard" color='white' label='Name' placeholder='Your Name' value={name} required  onChange={(e)=>{setName(e.target.value)}}/>
+                    <Input variant="standard" color='white' inputMode='tel' label='Phone' value={phone} placeholder='Enter 10 digit mobile number' required pattern='[0-9]{10}'  onChange={(e)=>{setPhone(e.target.value)}}/>
+                    <Input variant="standard" color='white' inputMode='email' label='Email' value={email} placeholder='Your Email Address' required  onChange={(e)=>{setEmail(e.target.value)}}/>
+                    <Input variant="standard" color='white' label='Company' placeholder='Your Company' value={company} required  onChange={(e)=>{setCompany(e.target.value)}}/>
+                    <Input variant='standard' color='white' multiple={true} label='Message' value={message} placeholder='Enter your  message...' rows={4}  onChange={(e)=>{setMessage(e.target.value)}}/>
+                    <Button type='submit' className='mt-6 w-36'  color='white' ripple size='lg'>
+                        {loading ? "Sending..." : "Send"}
+                    </Button>
                 </form>
                 
             </div>

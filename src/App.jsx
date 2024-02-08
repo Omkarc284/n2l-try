@@ -1,4 +1,3 @@
-import { useRef } from 'react'
 
 import Navbar from './components/Navbar'
 import './App.css'
@@ -9,15 +8,14 @@ import Contact from './components/Contact'
 
 
 function App() {
-  const resultRef = useRef(null);
 
   return (
     <>
-      <Navbar resultRef={resultRef}/>
+      <Navbar />
       <Home />
       <About />
       <About2 />
-      <Contact ref={useRef}/>
+      <Contact />
     </>
   )
 }

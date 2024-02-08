@@ -1,25 +1,43 @@
 import React from 'react'
-import { styles } from '../styles'
 import frame from '../assets/frame.svg'
 import { cardData } from './content'
-import Cards from './Cards'
+import { motion } from "framer-motion";
+import { SectionWrapper } from "../hoc";
+import { fadeIn, textVariant } from "../utils/motion";
 
+const Cards = ({index, props}) => {
+  return (
+    <motion.div 
+      variants={fadeIn("up", "spring", index * 0.5, 0.75)}
+      className="flex overflow-hidden"
+    >
+      <div 
+        className='cardcontainer hover:bg-gradient-to-b hover:from-[#416EA0] hover:to-[#60AEE0] group'
+      >
+        <img src={props.image} className='absolute right-6 top-8 group-hover:scale-110'/>
+        <h1 className='font-montserrat font-bold text-[#5B5D5C] text-3xl pt-16 w-[80%] group-hover:text-white'>{props.title}</h1>
+        <p className='font-montserrat font-light text-4 group-hover:text-white'>{props.description}</p>
+
+      </div>
+    </motion.div>
+    
+  )
+}
 const Home = () => {
   return (
     
-    <div className={`${styles.padding} w-full h-screen flex items-center`}>
+    <div className='w-full h-screen flex items-center'>
         <div className="w-full h-full flex items-center max-w-8xl mx-auto">
             <div className='w-full flex flex-col'>
-              <div className="flex flex-col mt-9 pt-48">
-                <h1 className="font-montserrat font-bold w-3/5 text-[#24346F] text-[32px] lg:text-[48px] 2xl:text-[64px] stroke-white">Crafting Tomorrow’s Digital Experiences</h1>
-                <h2 className='w-3/5 font-montserrat font-medium text-black text-[16px] lg:text-[24px] 2xl:text-[32px]'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h2>
-              </div>
-              <div className=" w-full flex flex-wrap justify-between mt-[9%]">
-                {
-                  
-                  cardData.map((card) => (
+              <motion.div variants={textVariant()} className="flex flex-col pt-8">
+                <h1 className="font-montserrat font-bold w-3/5 text-[#24346F] text-[24px] lg:text-[36px] 2xl:text-[48px] stroke-white">Crafting Tomorrow’s Digital Experiences</h1>
+                <h2 className='w-3/5 font-montserrat font-medium text-black text-[12px] lg:text-[18px] 2xl:text-[24px]'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h2>
+              </motion.div>
+              <div className=" w-full flex flex-wrap justify-between mt-[6%]">
+                {     
+                  cardData.map((card, index) => (
                     <div className="flex justify-between" key={card.id}>
-                      <Cards props={card}/>
+                      <Cards index={index} props={card}/>
                     </div>
                     
                   ))
@@ -28,7 +46,7 @@ const Home = () => {
                 
                 
             </div>
-            <img src={frame} alt='frame' className='object-contain absolute top-[16%] right-[3%] -z-10' />
+            <img src={frame} alt='frame' className='object-contain w-[36%] absolute top-[16%] right-[3%] -z-10' />
             
 
         </div>
@@ -38,4 +56,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default SectionWrapper(Home,'home')
