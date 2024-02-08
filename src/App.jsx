@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useRef } from 'react'
 
 import Navbar from './components/Navbar'
 import './App.css'
@@ -9,15 +9,15 @@ import Contact from './components/Contact'
 
 
 function App() {
-  const [count, setCount] = useState(0)
+  const resultRef = useRef(null);
 
   return (
     <>
-      <Navbar />
+      <Navbar resultRef={resultRef}/>
       <Home />
       <About />
       <About2 />
-      <Contact />
+      <Contact ref={useRef}/>
     </>
   )
 }

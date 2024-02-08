@@ -3,12 +3,16 @@ import { styles } from '../styles'
 import { Link } from 'react-router-dom'
 import logo from '../assets/react.svg'
 
-const Navbar = () => {
+const Navbar = ({ resultRef }) => {
     const [active, setActive] = useState("")
   const [toggle, setToggle] = useState(false)
+  const handleScroll = () => {
+
+    resultRef.current.scrollIntoView({ behavior: "smooth" });
+  }
   return (
-    <nav className={`${styles.paddingX} w-full flex items-center fixed top-0 z-2`}>
-        <div className="w-full flex justify-between items-center max-w-8xl py-8 mx-auto">
+    <nav className={`${styles.paddingX} w-full flex items-center fixed top-0 z-20 backdrop-blur shadow-sm rounded-b-2xl bg-blue-300 bg-opacity-20`}>
+        <div className="w-full flex justify-between items-center max-w-8xl sm:py-4 lg:py-8 mx-auto">
             <Link 
                 to="/" 
                 className='flex items-center gap-2' 
@@ -16,7 +20,7 @@ const Navbar = () => {
             >
                 <img src={logo} alt="logo" className='w-64 object-contain' />
             </Link>
-            <ul className='list-none flex justify-between items-center gap-4'>
+            {/* <ul className='list-none flex justify-between items-center gap-4'>
                 <li className='text-black font-montserrat font-medium text-[16px] cursor-pointer mx-4'>
                     <a href="/">Home</a>
                 </li>
@@ -27,9 +31,10 @@ const Navbar = () => {
                     <a href="/">Services</a>
                 </li>
                     
-            </ul>
+            </ul> */}
             <div className="flex justify-end items-center gap-2">
-                <button className='p-4 rounded-full bg-gray-700 text-white shadow-lg'>
+                
+                <button className='p-4 font-montserrat rounded-full bg-gray-700 text-white shadow-lg' onClick={handleScroll}>
                     Contact Us
                 </button>
             </div>
