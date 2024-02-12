@@ -15,30 +15,30 @@ const About2 = () => {
                 className='flex md:p-6 justify-center items-center md:items-start w-1/2 flex-col'
             >
                 <h2 className='text-[#23346F] font-montserrat text-center md:text-justify font-bold text-[9px] sm:text-[18px] lg:text-[24px] 2xl:text-[30px] md:mb-12'>Why Choose Nex2Link?</h2>
-                <p className='text-black font-montserrat text-center md:text-justify font-light text-[7px] sm:text-[12px] lg:text-[18px] 2xl:text-2xl py-6'>At Nex2Link, we understand that choosing a digital solutions partner is a critical decision for the success of your business.</p>
-                <div className="flex justify-start items-start">
-                    <img className='w-[6px] sm:w-[10px] lg:w-[16px] 2xl:w-[22px]' src={tick} alt="" />
-                    <p className='text-black font-montserrat text-left md:text-justify font-light text-[6px] sm:text-[10px] lg:text-[16px] 2xl:text-[22px]'>Collaborative Innovation</p>
+                <p className='text-black font-montserrat text-justify font-light text-[7px] sm:text-[12px] lg:text-[18px] 2xl:text-2xl py-6'>At Nex2Link, we understand that choosing a digital solutions partner is a critical decision for the success of your business.</p>
+                <div className="flex w-full justify-start items-start">
+                    <img className='w-[6px] sm:w-[10px] lg:w-[16px] 2xl:w-[22px] mt-[2px] mr-2' src={tick} alt="" />
+                    <p className='text-black font-montserrat text-justify font-light text-[6px] sm:text-[10px] lg:text-[16px] 2xl:text-[22px]'>Collaborative Innovation</p>
                 </div>
-                <div className="flex justify-start items-start">
-                    <img className='w-[6px] sm:w-[10px] lg:w-[16px] 2xl:w-[22px]' src={tick} alt="" />
-                    <p className='text-black font-montserrat text-left md:text-justify font-light text-[6px] sm:text-[10px] lg:text-[16px] 2xl:text-[22px]'>Strategic Planning for Success</p>
+                <div className="flex w-full justify-start items-start">
+                    <img className='w-[6px] sm:w-[10px] lg:w-[16px] 2xl:w-[22px] mt-[2px] mr-2' src={tick} alt="" />
+                    <p className='text-black font-montserrat text-justify font-light text-[6px] sm:text-[10px] lg:text-[16px] 2xl:text-[22px]'>Strategic Planning for Success</p>
                 </div>
-                <div className="flex justify-start items-start">
-                    <img className='w-[6px] sm:w-[10px] lg:w-[16px] 2xl:w-[22px]' src={tick} alt="" />
-                    <p className='text-black font-montserrat text-left md:text-justify font-light text-[6px] sm:text-[10px] lg:text-[16px] 2xl:text-[22px]'>Agile and Adaptive</p>
+                <div className="flex w-full justify-start items-start">
+                    <img className='w-[6px] sm:w-[10px] lg:w-[16px] 2xl:w-[22px] mt-[2px] mr-2' src={tick} alt="" />
+                    <p className='text-black font-montserrat text-justify font-light text-[6px] sm:text-[10px] lg:text-[16px] 2xl:text-[22px]'>Agile and Adaptive</p>
                 </div>
-                <div className="flex justify-start items-start">
-                    <img className='w-[6px] sm:w-[10px] lg:w-[16px] 2xl:w-[22px]' src={tick} alt="" />
-                    <p className='text-black font-montserrat text-left md:text-justify font-light text-[6px] sm:text-[10px] lg:text-[16px] 2xl:text-[22px]'>Dedicated Project Management</p>
+                <div className="flex w-full justify-start items-start">
+                    <img className='w-[6px] sm:w-[10px] lg:w-[16px] 2xl:w-[22px] mt-[2px] mr-2' src={tick} alt="" />
+                    <p className='text-black font-montserrat text-justify font-light text-[6px] sm:text-[10px] lg:text-[16px] 2xl:text-[22px]'>Dedicated Project Management</p>
                 </div>
-                <div className="flex justify-start items-start">
-                    <img className='w-[6px] sm:w-[10px] lg:w-[16px] 2xl:w-[22px]' src={tick} alt="" />
-                    <p className='text-black font-montserrat text-left md:text-justify font-light text-[6px] sm:text-[10px] lg:text-[16px] 2xl:text-[22px]'>Continuous Learning and Growth</p>
+                <div className="flex w-full justify-start items-start">
+                    <img className='w-[6px] sm:w-[10px] lg:w-[16px] 2xl:w-[22px] mt-[2px] mr-2' src={tick} alt="" />
+                    <p className='text-black font-montserrat text-justify font-light text-[6px] sm:text-[10px] lg:text-[16px] 2xl:text-[22px]'>Continuous Learning and Growth</p>
                 </div>
-                <div className="flex justify-start items-start">
-                    <img className='w-[6px] sm:w-[10px] lg:w-[16px] 2xl:w-[22px]' src={tick} alt="" />
-                    <p className='text-black font-montserrat text-left md:text-justify font-light text-[6px] sm:text-[10px] lg:text-[16px] 2xl:text-[22px]'>Global Vision, Local Understanding</p>
+                <div className="flex w-full justify-start items-start">
+                    <img className='w-[6px] sm:w-[10px] lg:w-[16px] 2xl:w-[22px] mt-[2px] mr-2' src={tick} alt="" />
+                    <p className='text-black font-montserrat text-justify font-light text-[6px] sm:text-[10px] lg:text-[16px] 2xl:text-[22px]'>Global Vision, Local Understanding</p>
                 </div>
                 
             </motion.div>
