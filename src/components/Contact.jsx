@@ -58,7 +58,7 @@ const Contact = forwardRef((props, ref) => {
     
   return (
     <div ref={ref} className={`w-full h-full md:h-screen flex items-center`}>
-        <div className="w-full h-[84%] md:h-[75%] flex flex-col justify-center md:flex-row md:justify-between items-center rounded-xl md:max-w-[640px] lg:max-w-[1280px] md:rounded-[81px] bg-gradient-to-br from-[#24346F] to-[#416EA0] mx-auto md:mt-48">
+        <div className="w-full h-[84%] md:h-[75%] flex flex-col justify-center md:flex-row md:justify-between items-center rounded-xl md:max-w-[640px] lg:max-w-[1080px] xl:max-w-[1280px] md:rounded-[81px] bg-gradient-to-br from-[#24346F] to-[#416EA0] mx-auto md:mt-48">
             <div className='flex p-6 md:p-8 justify-start items-start w-[90%] md:w-1/2 flex-col'>
                 <h2 className='text-white text-center font-montserrat font-bold text-[12px] sm:text-[18px] lg:text-[24px]'>Get In Touch</h2>
                 <p className='text-white text-justify font-montserrat font-light text-[10px] sm:text-[12px] lg:text-[18px] py-4'>To request a quote or want to meet up contact us directly or fill out the form and we will get back to you promptly.</p>

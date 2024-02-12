@@ -12,7 +12,7 @@ const Navbar = () => {
 //   }
   return (
     <nav className={`w-full h-[84px] lg:h-[128px] flex justify-center items-center fixed top-0 z-20 backdrop-blur shadow-sm rounded-b-2xl bg-blue-300 bg-opacity-20`}>
-        <div className="w-full p-2 md:p-0 max-w-[360px] md:max-w-[640px] lg:max-w-[1280px] flex justify-between items-center">
+        <div className="w-full p-2 md:p-0 max-w-[360px] md:max-w-[640px] lg:max-w-[1080px] xl:max-w-[1280px] flex justify-between items-center">
             <Link 
                 to="/" 
                 className='flex items-center gap-2' 

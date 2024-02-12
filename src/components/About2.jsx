@@ -7,8 +7,8 @@ import { slideIn } from "../utils/motion";
 
 const About2 = () => {
   return (
-    <div className='w-full h-screen flex items-center'>
-        <div className='w-full h-full flex flex-col justify-center md:flex-row md:justify-between items-center max-w-[360px] md:max-w-[640px] lg:max-w-[1280px]  mx-auto'>
+    <div className='w-full h-full flex items-center'>
+        <div className='w-full h-full flex flex-col justify-center md:flex-row md:justify-between items-center max-w-[360px] md:max-w-[640px] lg:max-w-[1080px] xl:max-w-[1280px] mx-auto'>
             
             <motion.div
                 variants={slideIn("left", "tween", 0.2, 1)} 
@@ -46,7 +46,7 @@ const About2 = () => {
                 variants={slideIn("right", "tween", 0.2, 1)}
                 className="flex justify-center items-center w-full md:w-1/2"
             >
-                <img src={about2} alt="" className='h-[60%] w-[90%] md:h-[60%] md:w-[60%] object-contain' />
+                <img src={about2} alt="" className='h-[60%] w-[60%] md:h-[60%] md:w-[60%] object-contain' />
             </motion.div>
         </div>
     </div>

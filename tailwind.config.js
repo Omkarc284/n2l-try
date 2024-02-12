@@ -11,9 +11,9 @@ module.exports = withMT({
       'md': '744px',
       // => @media (min-width: 744px) { ... }
 
-      'lg': '1440px',
+      'lg': '1280px',
       // => @media (min-width: 1440px) { ... }
-
+      'xl': '1440px',
       'xs': '100px' 
     },
     extend: {
