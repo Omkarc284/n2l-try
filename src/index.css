@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .cardcontainer{
-    @apply flex flex-col p-2 lg:p-6 max-w-[360px] max-h-[303px] backdrop-blur-sm bg-gradient-to-b from-[#ececec] to-transparent rounded-xl bg-opacity-20
+    @apply flex flex-col p-2 lg:p-4 xl:p-6 max-w-[360px] max-h-[303px] backdrop-blur-sm bg-gradient-to-b from-[#ececec] to-transparent rounded-xl bg-opacity-20
 }
 
 .modal_h2{
