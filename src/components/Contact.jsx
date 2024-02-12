@@ -63,8 +63,8 @@ const Contact = forwardRef((props, ref) => {
                 <h2 className='text-white text-center font-montserrat font-bold text-[12px] sm:text-[18px] lg:text-[24px]'>Get In Touch</h2>
                 <p className='text-white text-justify font-montserrat font-light text-[10px] sm:text-[12px] lg:text-[18px] py-4'>To request a quote or want to meet up contact us directly or fill out the form and we will get back to you promptly.</p>
                 <div className="hidden md:flex items-center md:items-start">
-                    <a href="https://facebook.com"> <img src={fb} alt="Facebook" className='w-[50%] md:w-[75%] lg:w-full pr-1 md:pr-3 lg:pr-4'/></a>
-                    <a href="https://instagram.com"><img src={insta} alt="Instagram" className='w-[50%] md:w-[75%] lg:w-full pr-1 md:pr-3 lg:pr-4'/></a>
+                    <a href="https://www.facebook.com/nex2link"> <img src={fb} alt="Facebook" className='w-[50%] md:w-[75%] lg:w-full pr-1 md:pr-3 lg:pr-4'/></a>
+                    <a href="https://www.instagram.com/nex2link/?hl=en"><img src={insta} alt="Instagram" className='w-[50%] md:w-[75%] lg:w-full pr-1 md:pr-3 lg:pr-4'/></a>
                     <a href="https://google.com"><img src={gplus} alt="Google Plus" className='w-[50%] md:w-[75%] lg:w-full pr-1 md:pr-3 lg:pr-4'/></a>
                     
                 </div>
