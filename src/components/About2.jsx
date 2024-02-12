@@ -12,7 +12,7 @@ const About2 = () => {
             
             <motion.div
                 variants={slideIn("left", "tween", 0.2, 1)} 
-                className='flex md:p-6 justify-center md:items-start w-1/2 flex-col'
+                className='flex md:p-6 justify-center items-center md:items-start w-1/2 flex-col'
             >
                 <h2 className='text-[#23346F] font-montserrat text-center md:text-justify font-bold text-[9px] sm:text-[18px] lg:text-[24px] 2xl:text-[30px] md:mb-12'>Why Choose Nex2Link?</h2>
                 <p className='text-black font-montserrat text-center md:text-justify font-light text-[7px] sm:text-[12px] lg:text-[18px] 2xl:text-2xl py-6'>At Nex2Link, we understand that choosing a digital solutions partner is a critical decision for the success of your business.</p>

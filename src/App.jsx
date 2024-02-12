@@ -10,13 +10,13 @@ import Contact from './components/Contact'
 function App() {
 
   return (
-    <>
+    <div className='overflow-x-hidden'>
       <Navbar />
       <Home />
       <About />
       <About2 />
       <Contact />
-    </>
+    </div>
   )
 }
 

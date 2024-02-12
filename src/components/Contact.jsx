@@ -57,23 +57,23 @@ const Contact = forwardRef((props, ref) => {
     }
     
   return (
-    <div ref={ref} className={`w-[360px] md:w-[640px] lg:w-[1280px] h-screen flex items-center justify-center `}>
-        <div className="w-full h-[84%] flex justify-between items-start px-16 py-28 rounded-[81px] max-w-8xl bg-gradient-to-br from-[#24346F] to-[#416EA0] mx-auto mt-48">
-            <div className='flex p-6 justify-start items-start w-1/2 flex-col'>
-                <h2 className='text-white font-montserrat font-bold text-4xl'>Get In Touch</h2>
-                <p className='text-white font-montserrat font-light text-[28px] py-4'>To request a quote or want to meet up contact us directly or fill out the form and we will get back to you promptly.</p>
-                <div className="flex items-start">
-                    <a href="https://facebook.com"> <img src={fb} alt="Facebook" className='pr-4'/></a>
-                    <a href="https://instagram.com"><img src={insta} alt="Instagram" className='pr-4'/></a>
-                    <a href="https://google.com"><img src={gplus} alt="Google Plus" className='pr-4'/></a>
+    <div ref={ref} className={`w-full h-screen flex items-center`}>
+        <div className="w-full h-[80%] md:h-[75%] flex flex-col justify-center md:flex-row md:justify-between items-center rounded-xl md:max-w-[640px] lg:max-w-[1280px] md:rounded-[81px] bg-gradient-to-br from-[#24346F] to-[#416EA0] mx-auto md:mt-48">
+            <div className='flex  md:p-8 justify-start items-start w-[90%] md:w-1/2 flex-col'>
+                <h2 className='text-white text-center font-montserrat font-bold text-[12px] sm:text-[18px] lg:text-[24px]'>Get In Touch</h2>
+                <p className='text-white text-justify font-montserrat font-light text-[10px] sm:text-[12px] lg:text-[18px] py-4'>To request a quote or want to meet up contact us directly or fill out the form and we will get back to you promptly.</p>
+                <div className="hidden md:flex items-center md:items-start">
+                    <a href="https://facebook.com"> <img src={fb} alt="Facebook" className='w-[50%] md:w-[75%] lg:w-full pr-1 md:pr-3 lg:pr-4'/></a>
+                    <a href="https://instagram.com"><img src={insta} alt="Instagram" className='w-[50%] md:w-[75%] lg:w-full pr-1 md:pr-3 lg:pr-4'/></a>
+                    <a href="https://google.com"><img src={gplus} alt="Google Plus" className='w-[50%] md:w-[75%] lg:w-full pr-1 md:pr-3 lg:pr-4'/></a>
                     
                 </div>
-                <div className="flex justify-end items-end text-white font-montserrat font-medium mt-8">
-                    <button className='pr-6' onClick={handleTerms}>Terms & Condition</button>
-                    <button className='pr-6' onClick={handlePrivacy}>Privacy Policy</button>
+                <div className=" hidden md:flex justify-end items-end text-white font-montserrat font-medium mt-8">
+                    <button className='text-[7px] sm:text-[12px] lg:text-[18px] pr-2 md:pr-4 lg:pr-6' onClick={handleTerms}>Terms & Condition</button>
+                    <button className='text-[7px] sm:text-[12px] lg:text-[18px] pr-2 md:pr-4 lg:pr-6' onClick={handlePrivacy}>Privacy Policy</button>
                 </div>
             </div>
-            <div className="flex justify-center items-center w-1/2">
+            <div className="flex justify-center items-center mb-9 md:mb-0 md:w-1/2">
                 <form action="" onSubmit={handleSubmit} className='flex lg:w-96 flex-col gap-6 items-center'>
                     <Input variant="standard" color='white' label='Name' placeholder='Your Name' value={name} required  onChange={(e)=>{setName(e.target.value)}}/>
                     <Input variant="standard" color='white' inputMode='tel' label='Phone' value={phone} placeholder='Enter 10 digit mobile number' required pattern='[0-9]{10}'  onChange={(e)=>{setPhone(e.target.value)}}/>
@@ -86,7 +86,17 @@ const Contact = forwardRef((props, ref) => {
                 </form>
                 
             </div>
-
+           
+            <div className="md:hidden flex justify-center items-center md:items-start w-[60%] p-2">
+                <a className='items-center justify-center p-2' href="https://facebook.com"> <img src={fb} style={{ height: 36, width: 36 }} alt="Facebook" /></a>
+                <a className='items-center justify-center p-2' href="https://instagram.com"><img src={insta} style={{ height: 36, width: 36 }} alt="Instagram" /></a>
+                <a className='items-center justify-center p-2' href="https://google.com"><img src={gplus} style={{ height: 36, width: 36 }} alt="Google Plus" /></a>
+                
+            </div>
+            <div className="flex float-left justify-between items-center text-white font-montserrat font-medium  md:hidden">
+                <button className='text-[7px] p-2' onClick={handleTerms}>Terms & Condition</button>
+                <button className='text-[7px] p-2' onClick={handlePrivacy}>Privacy Policy</button>
+            </div>
         </div>
         <Dialog open={termsmodal} size={"sm"} handler={handleTerms}>
             <DialogHeader>
