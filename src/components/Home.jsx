@@ -14,9 +14,9 @@ const Cards = ({index, props}) => {
       <div 
         className='cardcontainer xs:w-[256px] sm:w-[170px] md:w-[144px] lg:w-[288px] hover:bg-gradient-to-b hover:from-[#416EA0] hover:to-[#60AEE0] group'
       >
-        <img src={props.image} className='scale-75 sm:scale-50 md:scale-50 xl:scale-100 absolute top-2 right-2 lg:right-4 lg:top-4 xs:group-hover:scale-[80%] sm:group-hover:scale-[60%] xl:group-hover:scale-110'/>
-        <h1 className='font-montserrat font-extrabold xl:font-bold text-[#383b3a] text-[12px] lg:[20px] xl:text-[22px] pt-16 w-[108px] md:w-[72px] lg:w-[128px] xl:w-[176px] group-hover:text-white'>{props.title}</h1>
-        <p className='w-[144px] md:w-[128px] lg:w-[196px] xl:w-[216px] font-montserrat font-normal xl:font-light text-[7px] lg:text-[12px] group-hover:text-white'>{props.description}</p>
+        <img src={props.image} className='scale-50 md:scale-50 xl:scale-100 absolute top-2 right-2 lg:right-4 lg:top-4 xs:group-hover:scale-[60%] sm:group-hover:scale-[60%] xl:group-hover:scale-110'/>
+        <h1 className='font-montserrat font-extrabold xl:font-bold text-[#383b3a] text-[12px] lg:[20px] xl:text-[22px] pt-12 sm:pt-16 w-[108px] md:w-[72px] lg:w-[128px] xl:w-[176px] group-hover:text-white'>{props.title}</h1>
+        <p className='w-[174px] sm:w-[144px] md:w-[128px] lg:w-[196px] xl:w-[216px] font-montserrat font-normal xl:font-light text-[7px] lg:text-[12px] group-hover:text-white'>{props.description}</p>
 
       </div>
     </motion.div>
