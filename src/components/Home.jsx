@@ -26,7 +26,7 @@ const Cards = ({index, props}) => {
 const Home = () => {
   return (
     
-    <div className=' w-full h-screen flex justify-center'>
+    <div className=' w-full h-full md:h-screen flex justify-center'>
         <div className=" max-w-[360px] md:max-w-[640px] lg:max-w-[1280px] justify-center h-full flex flex-col">
             <div className='flex flex-col md:flex-row items-center  text-center md:text-left '>
               <motion.div variants={textVariant()} className="flex flex-1 flex-col md:-mt-36 pt-8 items-center md:items-start">

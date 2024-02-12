@@ -57,9 +57,9 @@ const Contact = forwardRef((props, ref) => {
     }
     
   return (
-    <div ref={ref} className={`w-full h-screen flex items-center`}>
-        <div className="w-full h-[80%] md:h-[75%] flex flex-col justify-center md:flex-row md:justify-between items-center rounded-xl md:max-w-[640px] lg:max-w-[1280px] md:rounded-[81px] bg-gradient-to-br from-[#24346F] to-[#416EA0] mx-auto md:mt-48">
-            <div className='flex  md:p-8 justify-start items-start w-[90%] md:w-1/2 flex-col'>
+    <div ref={ref} className={`w-full h-full md:h-screen flex items-center`}>
+        <div className="w-full h-[84%] md:h-[75%] flex flex-col justify-center md:flex-row md:justify-between items-center rounded-xl md:max-w-[640px] lg:max-w-[1280px] md:rounded-[81px] bg-gradient-to-br from-[#24346F] to-[#416EA0] mx-auto md:mt-48">
+            <div className='flex p-6 md:p-8 justify-start items-start w-[90%] md:w-1/2 flex-col'>
                 <h2 className='text-white text-center font-montserrat font-bold text-[12px] sm:text-[18px] lg:text-[24px]'>Get In Touch</h2>
                 <p className='text-white text-justify font-montserrat font-light text-[10px] sm:text-[12px] lg:text-[18px] py-4'>To request a quote or want to meet up contact us directly or fill out the form and we will get back to you promptly.</p>
                 <div className="hidden md:flex items-center md:items-start">
@@ -73,29 +73,29 @@ const Contact = forwardRef((props, ref) => {
                     <button className='text-[7px] sm:text-[12px] lg:text-[18px] pr-2 md:pr-4 lg:pr-6' onClick={handlePrivacy}>Privacy Policy</button>
                 </div>
             </div>
-            <div className="flex justify-center items-center mb-9 md:mb-0 md:w-1/2">
+            <div className="flex justify-center items-center mb-2 md:mb-0 md:w-1/2">
                 <form action="" onSubmit={handleSubmit} className='flex lg:w-96 flex-col gap-6 items-center'>
                     <Input variant="standard" color='white' label='Name' placeholder='Your Name' value={name} required  onChange={(e)=>{setName(e.target.value)}}/>
                     <Input variant="standard" color='white' inputMode='tel' label='Phone' value={phone} placeholder='Enter 10 digit mobile number' required pattern='[0-9]{10}'  onChange={(e)=>{setPhone(e.target.value)}}/>
                     <Input variant="standard" color='white' inputMode='email' label='Email' value={email} placeholder='Your Email Address' required  onChange={(e)=>{setEmail(e.target.value)}}/>
                     <Input variant="standard" color='white' label='Company' placeholder='Your Company' value={company} required  onChange={(e)=>{setCompany(e.target.value)}}/>
                     <Input variant='standard' color='white' multiple={true} label='Message' value={message} placeholder='Enter your  message...' rows={4}  onChange={(e)=>{setMessage(e.target.value)}}/>
-                    <Button type='submit' className='mt-6 w-36'  color='white' ripple size='lg'>
+                    <Button type='submit' className='w-24 text-[9px] md:text-[16px] md:mt-6 md:w-36'  color='white' ripple size='lg'>
                         {loading ? "Sending..." : "Send"}
                     </Button>
                 </form>
                 
             </div>
            
-            <div className="md:hidden flex justify-center items-center md:items-start w-[60%] p-2">
+            <div className="md:hidden flex justify-center items-center md:items-start w-[60%] px-1">
                 <a className='items-center justify-center p-2' href="https://facebook.com"> <img src={fb} style={{ height: 36, width: 36 }} alt="Facebook" /></a>
                 <a className='items-center justify-center p-2' href="https://instagram.com"><img src={insta} style={{ height: 36, width: 36 }} alt="Instagram" /></a>
                 <a className='items-center justify-center p-2' href="https://google.com"><img src={gplus} style={{ height: 36, width: 36 }} alt="Google Plus" /></a>
                 
             </div>
-            <div className="flex float-left justify-between items-center text-white font-montserrat font-medium  md:hidden">
-                <button className='text-[7px] p-2' onClick={handleTerms}>Terms & Condition</button>
-                <button className='text-[7px] p-2' onClick={handlePrivacy}>Privacy Policy</button>
+            <div className="flex float-left justify-between pb-6 items-center text-white font-montserrat font-medium  md:hidden">
+                <button className='text-[7px] px-2' onClick={handleTerms}>Terms & Condition</button>
+                <button className='text-[7px] px-2' onClick={handlePrivacy}>Privacy Policy</button>
             </div>
         </div>
         <Dialog open={termsmodal} size={"sm"} handler={handleTerms}>
