@@ -57,7 +57,7 @@ const Contact = forwardRef((props, ref) => {
     }
     
   return (
-    <div ref={ref} className={`${styles.padding} w-full h-screen flex items-center justify-center `}>
+    <div ref={ref} className={`w-[360px] md:w-[640px] lg:w-[1280px] h-screen flex items-center justify-center `}>
         <div className="w-full h-[84%] flex justify-between items-start px-16 py-28 rounded-[81px] max-w-8xl bg-gradient-to-br from-[#24346F] to-[#416EA0] mx-auto mt-48">
             <div className='flex p-6 justify-start items-start w-1/2 flex-col'>
                 <h2 className='text-white font-montserrat font-bold text-4xl'>Get In Touch</h2>

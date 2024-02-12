@@ -7,6 +7,15 @@ module.exports = withMT({
   ],
   mode: "jit",
   theme: {
+    screens: {
+      'md': '744px',
+      // => @media (min-width: 744px) { ... }
+
+      'lg': '1440px',
+      // => @media (min-width: 1440px) { ... }
+
+      'xs': '100px' 
+    },
     extend: {
         fontFamily: {
             'montserrat': ['Montserrat'],
